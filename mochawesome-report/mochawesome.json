@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-12T05:06:52.418Z",
+    "end": "2021-09-12T05:07:02.664Z",
+    "duration": 10246,
+    "testsRegistered": 3,
+    "passPercent": 66.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "warning",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "f14cad5a-906a-4540-8da2-ca2581a03f67",
+    "title": "",
+    "fullFile": "cypress/integration/todo_spec.js",
+    "file": "cypress/integration/todo_spec.js",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "6819aecb-3f35-4659-9611-d332115ccdcf",
+        "title": "ToDo React",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should show the correct page title",
+            "fullTitle": "ToDo React should show the correct page title",
+            "duration": 1523,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.title().should('include', 'eBay');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f76106a3-48d1-4b98-91fc-6992d525779e",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "should click on the specific link in the page",
+            "fullTitle": "ToDo React should click on the specific link in the page",
+            "duration": 4595,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.get('.s-item__title').each(function ($el) {\n  if ($el.text() === 'Antique Dining Table') {\n    cy.log(\"log->\", $el.text());\n    cy.get($el).click();\n    cy.title().should('eq', 'Antique Dining Table');\n  }\n});",
+            "err": {
+              "message": "CypressError: Timed out retrying: Expected to find element: '.s-item__title', but never found it.",
+              "estack": "CypressError: Timed out retrying: Expected to find element: '.s-item__title', but never found it.\n    at Object.cypressErr (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (https://www.ebay.com.au/__cypress/runner/cypress_runner.js:114812:14)"
+            },
+            "isRoot": false,
+            "uuid": "3b5a5f7a-de95-4cbf-9d33-3a6212055c08",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "should click on search bar",
+            "fullTitle": "ToDo React should click on search bar",
+            "duration": 2543,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.get('input#gh-ac').type('tables');\ncy.get('select#gh-cat').select('Antiques').should('have.value', '20081');\ncy.get('input#gh-btn').click();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ec9617f7-a711-4804-a221-1f28b09afada",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "f76106a3-48d1-4b98-91fc-6992d525779e",
+          "ec9617f7-a711-4804-a221-1f28b09afada"
+        ],
+        "failures": [
+          "3b5a5f7a-de95-4cbf-9d33-3a6212055c08"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 8661,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}
